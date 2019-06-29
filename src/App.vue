@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-content>
+      <v-layout row wrap class="screen-size-height">
+        <v-flex md8 xs12 order-xs2 class="full-height">
+          <Skils class="full-height darkBlueGrey lightGrey--text" />
+        </v-flex>
+        <v-flex md4 xs12 order-md2 class="full-height">
+          <Main class="full-height lightBlueGrey lightGrey--text" />
+        </v-flex>
+      </v-layout>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from './components/Main'
+import Skils from './components/Skils'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    Main,
+    Skils
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.application {
+  font-family: ProximaNova,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+.full-height {
+  height: 100%
+}
+.screen-size-height {
+  height: 100vh
 }
 </style>
