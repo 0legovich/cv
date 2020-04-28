@@ -27,11 +27,16 @@ export default {
 </script>
 
 <style>
-.application {
+body {
   font-family: ProximaNova,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
 .full-height {
   height: 100%
+}
+@media (max-width: 960px) {
+  .full-height.md8 {
+    height: max-content
+  }
 }
 .screen-size-height {
   height: 100vh
