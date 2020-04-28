@@ -1,3 +1,7 @@
+const experience = (new Date() - new Date('2017', '9', '1')) / 31536000000
+const experienceYears = Math.floor(experience)
+const experienceFraction = (experience % experienceYears) * 10 / 12
+
 export const skills = [
   { name: "Main",
     info: [
@@ -12,12 +16,12 @@ export const skills = [
   {
     name: "Skills",
     info: [
-      "Ruby, Ruby on Rails",
+      `Ruby, Ruby on Rails (more then ${(experienceYears + experienceFraction).toFixed(1)} years experience)`,
       "SQL (PostgreSQL, MySQL)",
-      "RabbitMQ",
-      "Redis",
-      "Dry-rb",
+      "RabbitMQ, Redis / Sneakers, Sidekiq",
+      "Dry-rb (dry-transaction, dry-container, dry-auto_inject, dry-validation, dry-monads)",
       "Rspec",
+      "Golang (study stage)",
       "Kubernetes/Docker",
       "Forntend: React, Redux, Webpacker, ES6, Vue.js, jQuery"
     ]
@@ -26,7 +30,7 @@ export const skills = [
     name: "Experience",
     info: [
       "July 2018 - now: Ruby on Rails Developer (Full-stack). " +
-      "Development of internal electronic document management (Rocketbank, QIWI Bank).",
+      "Development of internal blockchain technology-based electronic document management (Rocketbank, QIWI Bank).",
       "July 2017 - July 2018: Ruby on Rails developer. Backend developer of healthcare automation projects in " +
       "Moscow, Moscow region and other regions (LLC 'Fortis Technologies').",
       "September 2016 - July 2017: Analyst. Technical specialist in IT-consulting company in the field of " +

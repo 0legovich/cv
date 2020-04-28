@@ -14,7 +14,7 @@
             <br />
             <h1 class="headline">Shpak Roman Olegovich</h1>
           </div>
-          <div v-else="hoverState">
+          <div v-else>
             <v-card class="lightBlueGrey lightGrey--text">
               <br/>
               <h1 class="headline">Ruby on Rails Developer</h1>
@@ -39,7 +39,7 @@ export default {
   data: () => ({ profileImg: profile, yearsOld: Math.floor((new Date() - new Date('1996', '2', '29')) / 31536000000), hoverState: false }),
   methods: {
     updateHoverState(isHover) {
-      setTimeout(() => this.hoverState = isHover, 130);
+      setTimeout(() => this.hoverState = isHover, 200);
     }
   }
 };
